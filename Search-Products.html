@@ -1,0 +1,20 @@
+<input type="search" name="search" id="search" placeholder="Search Products/Services">
+<ul id="result"></ul>
+<script>
+    document.getElementById("search").addEventListener("keyup",function(){
+        let search = this.value;
+        switch(search){
+            case "Mobile":
+            document.getElementById("result").innerHTML="<li><a href='Oppo.html'>Oppo Mobile</a></li>";
+            break;
+            case "Cloths":
+            document.getElementById("result").innerHTML="<li><a href='H&M.html'>H&M</a></li>";
+            break;
+            case "Shoes":
+            document.getElementById("result").innerHTML="<li><a href='Nike.html'>Nike</a></li><li><a href='Adidas.html'>Adidas</a></li>";
+            break;
+            default:
+            document.getElementById("result").innerHTML="Not Found";
+        }
+    })
+</script>

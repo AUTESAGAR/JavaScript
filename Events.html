@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="resize()" onscroll="scroll()">
+<script>
+    function x1(){alert("click Event");}
+    function enter(){document.querySelector("img").style="opacity:0.5";}
+    function out(){document.querySelector("img").style="";}
+    function dblclick(){document.querySelector("p").innerText="Something";}
+    function copy(){alert("Do Not Copy");}
+    function x2(){alert("MouseUp");}
+    function resize(){document.querySelector("body").style.background="lightgreen";}
+    function scroll(){document.querySelector("body").style.background="red";}
+</script>
+<button onclick="x1()">Click</button><br>
+<img src="./logo/social.jpg" alt="" width="350px" onmouseenter="enter()" onmouseout="out()" ><br>
+<button ondblclick="dblclick()">doubleClick</button><br>
+<button onmouseup="x2()">mouseup</button>
+<button >mousedown</button>
+<p oncontextmenu="copy()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero hic architecto consectetur aut recusandae odit maxime nesciunt voluptas perferendis, vero quidem consequatur repudiandae saepe, sed excepturi quas neque dignissimos quis.</p>
+</body>
+</html>
