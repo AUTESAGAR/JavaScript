@@ -1,19 +1,24 @@
 <input type="text" name="" id="search" placeholder="Search Student">
 <div id="result"></div>
 <script>
-    // let names = ["Kiran","Samir","Shital","Raju","Ramesh"];
+    let names = ["Kiran","Samir","Shital","Raju","Ramesh"];
+    document.getElementById("search").addEventListener("keyup",function(){
+        let searchTerm = this.value.trim(" ");
+        let r = names.filter(x);
+        console.log(r);
+        function x(names){
+            return names===searchTerm;
+        }
+        if(r.length==0){
+            document.getElementById("result").innerHTML="Not Found";
+        }
+        else{
+            document.getElementById("result").innerHTML=r;
+        }
+    })
     // names.fill("1")
     // document.write(names);
     
-    // document.getElementById("search").addEventListener("keyup",function(){
-    //     let searchTerm = this.value.trim(" ");
-    //     let r = names.filter(x);
-    //     function x(names){
-    //         return names===searchTerm;
-    //     }
-    //     document.getElementById("result").innerHTML=r;
-    // })
-
     // let no = [2,4,6,8,10,12,14,16,18,20];
     // let names = ["Kiran","Samir","Shital","Raju","Ramesh"];
     // document.write(typeof names);
@@ -75,5 +80,14 @@
     //     return no+500;
     // } 
     // document.write(r);
+
+    // let electronics = ["mobile","camera","smart-watch"];
+    // let electronics = [
+    //     ["mobile",15000,"Navi-Blue"],
+    //     ["camera",35800,"Black"],
+    //     ["smart-watch",4500,"Orange"],
+    // ];    
+    // document.write(electronics[0][0]);
+
 
 </script>
