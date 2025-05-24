@@ -1,0 +1,52 @@
+<center>
+    <h1>Create Account</h1>
+    <p><input type="text" name="name" id="name" placeholder="Enter Your name"></p>
+    <p id="msg_name"></p>
+    <p><input type="text" name="email" id="email" placeholder="Enter Your email"></p>
+    <p id="msg_email"></p>
+    <p><input type="text" name="mobile" id="mobile" placeholder="Enter Your mobile"></p>
+    <p id="msg_mobile"></p>
+    <p><input type="text" name="uname" id="uname" placeholder="Enter Your uname"></p>
+    <p id="msg_uname"></p>
+    <p><input type="text" name="pwd" id="pwd" placeholder="Enter Your pwd"></p>
+    <p id="msg_pwd"></p>
+    <p><button>Create Account</button></p>
+</center>
+<script>
+    document.querySelector("button").addEventListener("click",function(){
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let email_c = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let mobile = document.getElementById("mobile").value;
+        let uname = document.getElementById("uname").value;
+        let pwd = document.getElementById("pwd").value;
+        if(name==""){
+            document.getElementById("msg_name").innerHTML="<span style='color:red'>Please Enter Your Name*</span>"
+        }
+        else if(email==""){
+            document.getElementById("msg_name").innerHTML="";
+            document.getElementById("msg_email").innerHTML="<span style='color:red'>Please Enter Your Email*</span>"
+        }
+        else if(!email_c.test(email)){
+            document.getElementById("msg_name").innerHTML="";
+            document.getElementById("msg_email").innerHTML="<span style='color:red'>Enter Valid Email Ex.abc@gmail.com </span>"
+        }
+        else if(mobile==""){
+            document.getElementById("msg_email").innerHTML=""
+            document.getElementById("msg_mobile").innerHTML="<span style='color:red'>Please Enter Your Mobile*</span>"
+        }
+        else if(uname==""){
+            document.getElementById("msg_mobile").innerHTML=""
+            document.getElementById("msg_uname").innerHTML="<span style='color:red'>Please Enter Your Username*</span>"
+        }
+        else if(pwd==""){
+            document.getElementById("msg_uname").innerHTML=""
+            document.getElementById("msg_pwd").innerHTML="<span style='color:red'>Please Enter Your Password*</span>"
+        }
+        else{
+            document.getElementById("msg_pwd").innerHTML=""
+            alert("Reg Success");
+            window.location.href="https://www.vittechnologysolution.in"
+        }
+    })
+</script>

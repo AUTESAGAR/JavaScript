@@ -1,0 +1,26 @@
+<style>
+    .container{
+        margin:auto;
+        border: 2px solid;
+        padding: 2px;
+        width: 800px;
+        height: 300px;
+        text-align: center;
+    }
+    #slider{
+        width: 800px;
+        height: 300px;
+    }
+</style>
+<div class="container">
+    <img src="" alt="slider" id="slider">
+</div>
+<script>
+    document.getElementById("slider").src="slide-2.jpg";
+    function one(){document.getElementById("slider").src="slide-1.jpg";}
+    function two(){document.getElementById("slider").src="slide-2.jpg";}
+    function three(){document.getElementById("slider").src="slide-3.jpg";}
+    setInterval(() => { one() }, 3000);
+    setInterval(() => { two() }, 6000);
+    setInterval(() => { three() }, 9000);
+</script>

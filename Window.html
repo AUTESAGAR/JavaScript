@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Simple Site</h1>
+    <button id="google">Google</button>
+
+    <input type="text" name="" id="uname">
+    <input type="text" name="" id="pwd">
+    <p id="result"></p>
+    <button id="login">Login</button> -->
+
+    <script>
+        document.getElementById("login").addEventListener("click",function(){
+            let uname = document.getElementById("uname").value;
+            let pwd = document.getElementById("pwd").value;
+            if(uname==="Samir@123" && pwd==="Samir@123"){
+                document.getElementById("result").innerHTML="<span style='color:green'>Login Success</span>";                
+                window.location.href="String.html";
+                // setInterval(() => {
+                //     window.location.replace("String.html");
+                // }, 2000);
+            }
+            else{
+                document.getElementById("result").innerHTML="<span style='color:red'>Enter Valid Credentials</span>";
+            }
+        })
+
+        // document.write(window.location.protocol+"<br>");
+        // document.write(window.location.hostname+"<br>");
+        // document.write(window.location.port+"<br>");
+        // document.write(window.location.origin+"<br>");
+
+        // document.getElementById("google").addEventListener("click",()=>{
+        //     location.assign("http://www.google.com");
+        // })
+
+        // document.getElementById("google").addEventListener("click",()=>{
+        //     location.replace("http://www.google.com");
+        // })
+
+        setInterval(() => {
+           window.open('String.html','demo','height=250px,width=450px,left=100px,top=100px');
+        }, 2000);
+
+    </script>
+    <button onclick="window.print()" >Print</button>
+</body>
+</html>
